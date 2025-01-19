@@ -358,7 +358,7 @@ const tablet = document.querySelector('.dashboard');
 
 people.forEach((person) => {
   const age = person.died - person.born;
-  const centry = Math.ceil(person.died / 100);
+  const century = Math.ceil(person.died / 100);
 
   const row = document.createElement('tr');
   const nameCell = document.createElement('th');
@@ -381,16 +381,16 @@ people.forEach((person) => {
 
   ageCell.textContent = age;
 
-  const centryCell = document.createElement('th');
+  const centuryCell = document.createElement('th');
 
-  centryCell.textContent = centry;
+  centuryCell.textContent = century;
 
   row.appendChild(nameCell);
   row.appendChild(genderCell);
   row.appendChild(bornCell);
   row.appendChild(diedCell);
   row.appendChild(ageCell);
-  row.appendChild(centryCell);
+  row.appendChild(centuryCell);
 
   tablet.appendChild(row);
 });
